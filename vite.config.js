@@ -3,6 +3,6 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Frontend intership task/',
+  base: '/Task-Board-Frontend/',
   plugins: [react()],
 })

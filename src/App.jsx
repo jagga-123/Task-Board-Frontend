@@ -1,14 +1,14 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Login from "./components/Login";
-import Board from "./components/Board";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { isAuthenticated } from "./auth.js";
+import Board from "./components/Board";
+import Login from "./components/Login";
 
 const Protected = ({ children }) =>
   isAuthenticated() ? children : <Navigate to="/" />;
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Task-Board-Frontend/">
       <Routes>
         <Route path="/" element={<Login />} />
         <Route
